@@ -1,18 +1,8 @@
 from fastapi import APIRouter
-from app.api.v1.endpoints import category, knowledge
+from app.api.v1.endpoints import student, course, student_course
 
 router = APIRouter()
 
-# 注册分类路由，前缀为 /categories
-router.include_router(
-    category.router,
-    prefix="/categories",
-    tags=["分类管理"]
-)
-
-# 注册知识路由，前缀为 /knowledge
-router.include_router(
-    knowledge.router,
-    prefix="/knowledge",
-    tags=["知识管理"]
-)
+router.include_router(student.router, prefix="/students", tags=["学生管理"])
+router.include_router(course.router, prefix="/courses", tags=["课程管理"])
+router.include_router(student_course.router, prefix="/student-courses", tags=["选课管理"])

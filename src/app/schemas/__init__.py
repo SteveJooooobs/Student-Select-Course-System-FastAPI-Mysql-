@@ -1,3 +1,25 @@
-# 从子模块导入 Schema 类，方便其他地方统一导入
-from app.schemas.category import CategoryCreate, CategoryResponse
-from app.schemas.knowledge import KnowledgeCreate, KnowledgeUpdate, KnowledgeResponse
+from app.schemas.student import (
+    StudentBase,
+    StudentCreate,
+    StudentUpdate,
+    StudentResponse,
+    StudentSimple,
+    StudentWithCourses,
+)
+from app.schemas.course import (
+    CourseBase,
+    CourseCreate,
+    CourseUpdate,
+    CourseResponse,
+    CourseSimple,
+    CourseWithStudents,
+)
+from app.schemas.student_course import (
+    StudentCourseBase,
+    StudentCourseCreate,
+    StudentCourseResponse,
+)
+
+# 在所有类导入完成后，重建有循环引用的模型
+StudentWithCourses.model_rebuild()
+CourseWithStudents.model_rebuild()
