@@ -1,5 +1,5 @@
 from sqlalchemy.orm import Session
-from app.models.category import Category
+from app.models.course import Category
 from app.schemas.category import CategoryCreate
 
 def get_category(db: Session, category_id: int):

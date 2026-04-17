@@ -1,5 +1,5 @@
 from sqlalchemy.orm import Session
-from app.models.knowledge import Knowledge
+from app.models.student import Knowledge
 from app.schemas.knowledge import KnowledgeCreate, KnowledgeUpdate
 
 

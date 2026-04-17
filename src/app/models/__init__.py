@@ -1,2 +1,3 @@
-from app.models.category import Category
-from app.models.knowledge import Knowledge
+from app.models.course import Course
+from app.models.student import Student
+from app.models.student_course import StudentCourse
