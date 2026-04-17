@@ -21,8 +21,8 @@
 - 自动生成 Swagger API 文档
 
 ## 项目结构
-
 ```
+```markdown
 src/app/
 ├── main.py                 # 应用入口
 ├── core/
@@ -54,6 +54,7 @@ src/app/
             ├── student.py      # 学生接口
             ├── course.py       # 课程接口
             └── student_course.py # 选课接口
+```
 ```
 
 ## 快速开始
